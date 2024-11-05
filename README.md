@@ -51,6 +51,7 @@ The dataset contains:
     
 ### Data Analysis
 Microsoft Excel
+![Customer Dataset](https://github.com/user-attachments/assets/bbf4e58d-1ec8-43c7-952e-15dfa5c6124f)
 
 
 ---
