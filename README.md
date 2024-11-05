@@ -50,6 +50,9 @@ The dataset contains:
 9. Find the total number of active and canceled subscriptions.
     
 ### Data Analysis
+Microsoft Excel
+
+
 ---
 Some of the analyses and line of queries used includes;
 
