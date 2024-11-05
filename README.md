@@ -39,19 +39,75 @@ The dataset contains:
 ### Exploratory Data Analysis
   ---
 #### Key Performing Indicators (KPIs) used for this analysis include:
-1. 
-2. Total sales for each product category. 
-3. The number of sales transactions in each region.
-4. The highest-selling product by total sales value.
-5. Total revenue per product.
-6. Monthly sales totals for the current year.
+1. Analyze customer data to find subscription patterns. 
+2. Identify the most popular subscription types
+3. Find customers who canceled their subscription within 6 months.
+4. Calculate the average subscription duration for all customers. 
+5. Find customers with subscriptions longer than 12 months. 
+6. Total revenue by subscription type. 
 7. The top 5 customers by total purchase amount.
-8. The percentage of total sales contributed by each region.
-9. Identify products with no sales in the last quarter.
+8. The top 3 regions by subscription cancellations.
+9. Find the total number of active and canceled subscriptions.
     
 ### Data Analysis
 ---
 Some of the analyses and line of queries used includes;
 
 - Microsoft Excel
-Calculated the Total Sales (unit price by Quantity)
+Calculated the average subscription duration and identify the most popular 
+subscription types.
+
+view the contents in the table
+```sql
+select* from[dbo].[LITA CustomerData 1]
+```
+1. retrieve the total number of customers from each region. 
+```sql
+SELECT REGION, COUNT(DISTINCT CUSTOMERID) AS TOTAL_CUSTOMERS
+from[dbo].[LITA CustomerData 1]
+GROUP BY REGION;
+```
+2. find the most popular subscription type by the number of customers. 
+```sql
+SELECT TOP 1 SUBSCRIPTIONTYPE, COUNT (DISTINCT CUSTOMERID) AS TOTAL_CUSTOMERS
+FROM [dbo].[LITA CustomerData 1]
+GROUP BY SUBSCRIPTIONTYPE ORDER BY TOTAL_CUSTOMERS DESC
+```
+
+3. find customers who canceled their subscription within 6 months. 
+```sql
+SELECT CUSTOMERID FROM[dbo].[LITA CustomerData 1]
+WHERE DATEDIFF (MONTH,SUBSCRIPTIONSTART, SUBSCRIPTIONEND)<=6;
+```
+
+4. calculate the average subscription duration for all customers. 
+```sql
+SELECT AVG(DATEDIFF(DAY, SUBSCRIPTIONSTART, SUBSCRIPTIONEND)) AS AVG_SUBSCRIPTION_DURATION 
+FROM[dbo].[LITA CustomerData]
+```
+5. find customers with subscriptions longer than 12 months. 
+```sql
+SELECT CUSTOMERID FROM[dbo].[LITA CustomerData 1]
+WHERE DATEDIFF (MONTH,SUBSCRIPTIONSTART, SUBSCRIPTIONEND)>12;
+```
+6. calculate total revenue by subscription type. 
+
+```sql
+SELECT SUBSCRIPTIONTYPE,SUM(REVENUE) AS TOTAL_REVENUE FROM[dbo].[LITA CustomerData 1]
+GROUP BY SUBSCRIPTIONTYPE;
+```
+7. find the top 3 regions by subscription cancellations. 
+
+```sql
+SELECT TOP 3 REGION, COUNT(*) AS SUBSCRIPTIONEND_COUNT 
+FROM[dbo].[LITA CustomerData 1]
+WHERE SUBSCRIPTIONEND IS NULL
+GROUP BY REGION
+ORDER BY SUBSCRIPTIONEND_COUNT DESC;
+```
+8. find the total number of active and canceled subscriptions. 
+```sql
+SELECT CANCELED, COUNT(DISTINCT CANCELED) AS CANCELED_SUBSCRIPTION
+from[dbo].[LITA CustomerData 1]
+GROUP BY CANCELED;
+```
