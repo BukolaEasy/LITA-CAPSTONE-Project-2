@@ -62,6 +62,7 @@ Some of the analyses and line of queries used includes;
 - Microsoft Excel
 Calculated the average subscription duration and identify the most popular 
 subscription types.
+![SQL QUERIES 2](https://github.com/user-attachments/assets/0b6688b2-0bc0-4277-b4a6-238669cfa896)
 
 view the contents in the table
 ```sql
