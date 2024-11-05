@@ -115,3 +115,25 @@ SELECT CANCELED, COUNT(DISTINCT CANCELED) AS CANCELED_SUBSCRIPTION
 from[dbo].[LITA CustomerData 1]
 GROUP BY CANCELED;
 ```
+
+
+### Insights
+#### types of suscription rom the data includes Basic, Premium and stamdard
+##### Basic Subscription
+- Basic has the largest number of suscribers,
+- It has a total renenue of 33776735,
+- It is mre common at East and North region.
+
+##### Premium Subsciption
+- It has a total renenue of 16864376,
+- It is mre common at South region.
+- it higher cancelation Rate
+- it generate higher revenue per customer compared to Basic and Standard
+
+##### Standard Subscription
+- it is common at the west
+- it has a total revenue of 16864376
+
+#### Recommendation
+- Impement customer retention packages for premium and standard customers to reduces high cancelation rate
+- cancellation are lower at noth and east
