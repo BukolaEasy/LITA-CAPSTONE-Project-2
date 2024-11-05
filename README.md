@@ -53,6 +53,8 @@ The dataset contains:
 Microsoft Excel
 ![Customer Dataset](https://github.com/user-attachments/assets/bbf4e58d-1ec8-43c7-952e-15dfa5c6124f)
 
+### Visualization
+![customer Dashboard](https://github.com/user-attachments/assets/7d9524c2-1b33-4660-8120-6103f5933fbf)
 
 ---
 Some of the analyses and line of queries used includes;
