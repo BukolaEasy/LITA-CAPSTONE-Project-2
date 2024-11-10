@@ -6,7 +6,7 @@
 ---
 The dataset was provided by the institute to analyse the customer data for a subscription service to identify segments and trends.
 #### Goals
-- Identify Customer Behaivoior
+- Identify Customer Behaivour
 - Track subscription types, 
 - Identify key trends in cancellations and renewals and other key insights.
 
