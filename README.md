@@ -54,7 +54,8 @@ Microsoft Excel
 ![Customer Dataset](https://github.com/user-attachments/assets/bbf4e58d-1ec8-43c7-952e-15dfa5c6124f)
 
 ### Visualization
-![customer Dashboard](https://github.com/user-attachments/assets/7d9524c2-1b33-4660-8120-6103f5933fbf)
+![Customer Dashboard e](https://github.com/user-attachments/assets/65b68fca-3092-44b3-a648-63902464edc8)
+
 
 ---
 Some of the analyses and line of queries used includes;
